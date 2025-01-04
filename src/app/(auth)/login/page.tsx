@@ -17,7 +17,7 @@ const LoginPage = () => {
     const authenticate = async () => {
       const authHeader = `Basic ${btoa(`${username}:${password}`)}`;
 
-      const response = await fetch(`api/authenticate`, {
+      const response = await fetch(`api/authenticate/login`, {
         method: "GET",
         headers: {
           Authorization: authHeader,
@@ -100,7 +100,7 @@ const LoginPage = () => {
           </button>
         </div>
         <div className="text-center mt-3">
-          <a href="/register" className="text-decoration-none">
+          <a href="/signup" className="text-decoration-none">
             Don't have an account? Sign up
           </a>
         </div>
